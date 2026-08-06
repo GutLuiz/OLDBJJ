@@ -76,7 +76,7 @@ export default function Plans() {
 
   const getWhatsAppLink = (planName: string) => {
     const text = `Olá! Gostaria de obter mais informações sobre o ${planName} na Old City BJJ.`;
-    return `https://wa.me/5591981123456?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/5591982489117?text=${encodeURIComponent(text)}`;
   };
 
   return (

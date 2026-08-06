@@ -99,7 +99,7 @@ export default function CompeticoesContent() {
     }
   };
 
-  const whatsappUrl = "https://wa.me/5591981123456?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o+treino+de+competi%C3%A7%C3%A3o+da+Old+City+BJJ.";
+  const whatsappUrl = "https://wa.me/5591982489117?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o+treino+de+competi%C3%A7%C3%A3o+da+Old+City+BJJ.";
 
   return (
     <div className="bg-[#0A0A0A] py-16 sm:py-24 relative overflow-hidden">

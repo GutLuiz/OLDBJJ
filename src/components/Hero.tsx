@@ -92,7 +92,7 @@ export default function Hero() {
     }
   };
 
-  const whatsappUrl = "https://wa.me/5591981123456?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+aula+experimental+de+Jiu-Jitsu+na+Old+City+BJJ.";
+  const whatsappUrl = "https://wa.me/5591982489117?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+aula+experimental+de+Jiu-Jitsu+na+Old+City+BJJ.";
 
   return (
     <section

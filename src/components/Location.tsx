@@ -1,8 +1,8 @@
 import React from "react";
 
 export default function Location() {
-  const address = "Tv. Capitão Pedro Albuquerque, 396 - Cidade Velha, Belém - PA, 66020-130";
-  const whatsappUrl = "https://wa.me/5591981123456?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+aula+experimental+de+Jiu-Jitsu.";
+  const address = "Rua Ângelo Custódio, 696 (entre as ruas Triunvirato e Veiga Cabral) - Cidade Velha, Belém - PA";
+  const whatsappUrl = "https://wa.me/5591982489117?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+aula+experimental+de+Jiu-Jitsu.";
 
   return (
     <section id="location" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
@@ -63,20 +63,7 @@ export default function Location() {
                   </div>
                   <div>
                     <h4 className="text-white font-bold text-sm uppercase tracking-wide">Telefone / WhatsApp</h4>
-                    <p className="text-gray-400 text-sm mt-1">(91) 98112-3456</p>
-                  </div>
-                </div>
-
-                {/* Email Item */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand flex-shrink-0 mt-1">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold text-sm uppercase tracking-wide">E-mail</h4>
-                    <p className="text-gray-400 text-sm mt-1">contato@oldcitybjj.com.br</p>
+                    <p className="text-gray-400 text-sm mt-1">(91) 98248-9117</p>
                   </div>
                 </div>
               </div>
@@ -100,7 +87,7 @@ export default function Location() {
           <div className="lg:col-span-7 h-[450px] lg:h-auto min-h-[400px] border border-[#262626] rounded-2xl overflow-hidden shadow-2xl relative group">
             {/* The filter class simulates dark mode map; transitions to colored map on hover */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5226462719266!2d-48.5042898!3d-1.4608316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48ea38a6a8b79%3A0xe5a3c940b5c1cbf6!2sTv.%20Capit%C3%A3o%20Pedro%20Albuquerque%2C%20396%20-%20Cidade%20Velha%2C%20Bel%C3%A9m%20-%20PA%2C%2066020-130!5e0!3m2!1spt-BR!2sbr!4v1689100000000!5m2!1spt-BR!2sbr"
+              src="https://maps.google.com/maps?q=Rua+%C3%82ngelo+Cust%C3%B3dio,+696+-+Cidade+Velha,+Bel%C3%A9m+-+PA&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

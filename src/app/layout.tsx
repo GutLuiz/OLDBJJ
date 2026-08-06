@@ -22,7 +22,9 @@ export const metadata: Metadata = {
   keywords: ["Jiu-Jitsu", "Jiu-Jitsu Belém", "Old City BJJ", "Omar Salum", "Cidade Velha Belém", "Defesa Pessoal", "Artes Marciais Belém", "BJJ"],
   authors: [{ name: "LGN Soluções" }],
   icons: {
-    icon: "/assets/logos/old_city.jpeg",
+    icon: "/old_city.ico",
+    shortcut: "/old_city.ico",
+    apple: "/assets/logos/old_city.jpeg",
   },
 };
 

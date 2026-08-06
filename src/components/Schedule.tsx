@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 interface ClassSession {
   time: string;
   name: string;
-  category: "Adulto";
+  category: "Adulto" | "Kids" | string;
   level: string;
 }
 
@@ -26,16 +26,19 @@ export default function Schedule() {
   const scheduleData: WeeklySchedule = {
     seg: [
       { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
+      { time: "16:00 - 17:00", name: "Jiu-Jitsu Kids", category: "Kids", level: "Infantil / Todos os níveis" },
       { time: "19:30 - 20:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
     ],
     ter: [],
     qua: [
       { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
+      { time: "16:00 - 17:00", name: "Jiu-Jitsu Kids", category: "Kids", level: "Infantil / Todos os níveis" },
       { time: "19:30 - 20:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
     ],
     qui: [],
     sex: [
       { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
+      { time: "16:00 - 17:00", name: "Jiu-Jitsu Kids", category: "Kids", level: "Infantil / Todos os níveis" },
       { time: "20:00 - 21:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
     ],
     sab: [],
@@ -65,7 +68,7 @@ export default function Schedule() {
           </h2>
           <div className="h-1.5 w-24 bg-brand mx-auto mt-6 rounded-full" />
           <p className="text-gray-400 mt-6 text-base sm:text-lg font-light">
-            Aulas de Jiu-Jitsu (BJJ), Muay Thai &amp; Boxe para público adulto. 
+            Aulas de Jiu-Jitsu (BJJ) Adulto &amp; Kids, Muay Thai &amp; Boxe. 
           </p>
         </div>
 
@@ -112,7 +115,11 @@ export default function Schedule() {
                         <h4 className="text-white font-bold text-lg group-hover:text-brand transition-colors duration-300">
                           {session.name}
                         </h4>
-                        <span className="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full border bg-brand/10 text-brand border-brand/20">
+                        <span className={`text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full border ${
+                          session.category === "Kids"
+                            ? "bg-amber-500/10 text-amber-400 border-amber-500/20"
+                            : "bg-brand/10 text-brand border-brand/20"
+                        }`}>
                           {session.category}
                         </span>
                       </div>
