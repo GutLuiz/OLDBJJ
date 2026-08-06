@@ -1,105 +1,48 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-
-interface BeltInfo {
-  colorClass: string; // Tailwind class for belt main color
-  barClass: string;   // Tailwind class for the sleeve/bar
-  degreeColor: string; // Degrees color
-  degrees: number;     // Number of degrees (graus)
-  name: string;        // Name of the belt
-}
 
 interface Instructor {
   id: number;
   name: string;
   role: string;
-  categories: ("Adulto" | "Kids" | "Adolescentes")[];
+  rank: string;
+  categories: string[];
   bio: string;
   image: string;
-  belt: BeltInfo;
 }
 
 export default function Instructors() {
   const instructors: Instructor[] = [
     {
       id: 1,
-      name: "Mestre Omar Salum",
-      role: "Mestre & Fundador",
-      categories: ["Adulto"],
-      bio: "Faixa Preta 6º Grau credenciado pela CBJJ/IBJJF. Um dos maiores nomes do Jiu-Jitsu nortista, campeão mundial e nacional, com mais de 30 anos dedicados à arte suave.",
-      image: "/assets/logos/Omar_Salum.jpeg",
-      belt: {
-        colorClass: "bg-neutral-900 border border-neutral-800",
-        barClass: "bg-red-600",
-        degreeColor: "bg-yellow-400",
-        degrees: 6,
-        name: "Faixa Preta 6º Grau",
-      },
+      name: "Profª. Isabelle Rocha",
+      rank: "Faixa-Preta",
+      role: "Liderança Oficial",
+      categories: ["Faixa-Preta", "Adulto"],
+      bio: "Faixa-preta responsável pela liderança oficial da unidade Cidade Velha.",
+      image: "/assets/logos/old_city.jpeg",
     },
     {
       id: 2,
-      name: "Prof. Renato Silva",
-      role: "Instrutor Chefe - Adulto",
-      categories: ["Adulto"],
-      bio: "Faixa Preta 2º Grau. Especialista em técnicas de guarda e Jiu-Jitsu No-Gi. Focado na preparação física e de competição de atletas de alto nível.",
+      name: "Prof. Edson Nascimento",
+      rank: "Faixa-Preta",
+      role: "Instrutor (Gi & No-Gi)",
+      categories: ["Faixa-Preta", "Adulto"],
+      bio: "Professor faixa-preta integrado à equipe para conduzir as turmas dos turnos do meio-dia e da noite (com e sem kimono).",
       image: "/assets/logos/old_city.jpeg",
-      belt: {
-        colorClass: "bg-neutral-900 border border-neutral-800",
-        barClass: "bg-red-600",
-        degreeColor: "bg-white",
-        degrees: 2,
-        name: "Faixa Preta 2º Grau",
-      },
     },
     {
       id: 3,
-      name: "Profª. Alessandra Costa",
-      role: "Instrutora Responsável - Feminino & Kids",
-      categories: ["Kids", "Adolescentes"],
-      bio: "Faixa Marrom. Dedicada a promover o empoderamento feminino através da defesa pessoal e a coordenar o programa de Jiu-Jitsu Kids com metodologia lúdica e segura.",
+      name: "Prof. Rangel Silva",
+      rank: "Faixa-Preta",
+      role: "Time Técnico",
+      categories: ["Faixa-Preta", "Adulto"],
+      bio: "Professor faixa-preta que também compõe o time técnico de instrução da academia.",
       image: "/assets/logos/old_city.jpeg",
-      belt: {
-        colorClass: "bg-[#5C3A21]", // Brown belt
-        barClass: "bg-black",
-        degreeColor: "bg-white",
-        degrees: 3,
-        name: "Faixa Marrom",
-      },
-    },
-    {
-      id: 4,
-      name: "Instrutor Thiago Souza",
-      role: "Instrutor Auxiliar - Kids",
-      categories: ["Kids"],
-      bio: "Faixa Roxa. Auxilia no desenvolvimento motor e ensino de técnicas fundamentais de Jiu-Jitsu para crianças, estimulando disciplina e respeito.",
-      image: "/assets/logos/old_city.jpeg",
-      belt: {
-        colorClass: "bg-[#4B0082]", // Purple belt
-        barClass: "bg-black",
-        degreeColor: "bg-white",
-        degrees: 2,
-        name: "Faixa Roxa",
-      },
     },
   ];
-
-  const filters = [
-    { key: "todos", label: "Todos" },
-    { key: "adulto", label: "Adulto" },
-    { key: "kids", label: "Kids" },
-    { key: "adolescentes", label: "Adolescentes" },
-  ];
-
-  const [activeFilter, setActiveFilter] = useState("todos");
-
-  const filteredInstructors = instructors.filter((instructor) => {
-    if (activeFilter === "todos") return true;
-    return instructor.categories.some(
-      (cat) => cat.toLowerCase() === activeFilter
-    );
-  });
 
   return (
     <section id="instructors" className="py-24 bg-[#0F0F0F] relative overflow-hidden">
@@ -118,74 +61,52 @@ export default function Instructors() {
           </h2>
           <div className="h-1.5 w-24 bg-brand mx-auto mt-6 rounded-full" />
           <p className="text-gray-400 mt-6 text-base sm:text-lg font-light leading-relaxed">
-            Treine com quem realmente entende. Nossa equipe é liderada por uma lenda do Jiu-Jitsu 
-            e segue padrões éticos e pedagógicos de altíssimo nível.
+            Conheça nossos professores faixa-preta dedicados ao ensino e evolução dos nossos alunos na Cidade Velha.
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="flex justify-center space-x-2 sm:space-x-4 mb-16">
-          {filters.map((filter) => (
-            <button
-              key={filter.key}
-              onClick={() => setActiveFilter(filter.key)}
-              className={`px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 border ${
-                activeFilter === filter.key
-                  ? "bg-brand text-white border-brand shadow-glow-red"
-                  : "bg-[#161616] text-gray-400 border-[#262626] hover:text-white"
-              }`}
-            >
-              {filter.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Instructors Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {filteredInstructors.map((instructor) => (
+        {/* Instructors Grid - 3 cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {instructors.map((instructor) => (
             <div
               key={instructor.id}
               className="bg-[#121212] border border-[#262626] hover:border-brand/40 rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-glow-red hover:-translate-y-1.5"
             >
-              {/* Photo Container */}
-              <div className="relative w-full aspect-square bg-black overflow-hidden">
-                <Image
-                  src={instructor.image}
-                  alt={instructor.name}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+              {/* Logo Placeholder Container */}
+              <div className="relative w-full aspect-square bg-[#080808] flex items-center justify-center p-8 overflow-hidden border-b border-[#1A1A1A]">
+                <div className="relative w-36 h-36 rounded-full overflow-hidden border-2 border-brand/40 shadow-glow-red transition-transform duration-500 group-hover:scale-105">
+                  <Image
+                    src={instructor.image}
+                    alt={instructor.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 
-                {/* Visual Overlay gradient on image */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-60" />
 
-                {/* Role badge over photo */}
-                <span className="absolute bottom-4 left-4 px-3 py-1 bg-brand/90 backdrop-blur-sm text-white font-bold text-[10px] uppercase tracking-wider rounded-md">
+                {/* Role badge over logo container */}
+                <span className="absolute bottom-4 left-4 px-3 py-1 bg-brand/90 backdrop-blur-sm text-white font-bold text-[10px] uppercase tracking-wider rounded-md shadow-md">
                   {instructor.role}
                 </span>
               </div>
 
-              {/* Jiu-Jitsu Belt Component - Simulated in pure HTML */}
-              <div className={`h-5 w-full flex items-center relative select-none ${instructor.belt.colorClass}`}>
-                {/* Belt Sleeve/Bar (usually red or black) */}
-                <div className={`absolute right-4 top-0 bottom-0 w-16 flex items-center justify-around px-1.5 ${instructor.belt.barClass}`}>
-                  {/* Belt Degrees (White or Gold lines) */}
-                  {Array.from({ length: instructor.belt.degrees }).map((_, i) => (
-                    <div
-                      key={i}
-                      className={`w-0.5 h-3.5 rounded-full ${instructor.belt.degreeColor}`}
-                    />
-                  ))}
-                </div>
-                <span className="text-[9px] font-black text-white/60 tracking-widest uppercase pl-4">
-                  {instructor.belt.name}
+              {/* Black Belt visual strip */}
+              <div className="h-5 w-full bg-neutral-900 border-y border-neutral-800 flex items-center justify-between px-4 select-none relative">
+                <span className="text-[9px] font-black text-white/70 tracking-widest uppercase">
+                  {instructor.rank}
                 </span>
+                <div className="h-full w-12 bg-red-600 border-l border-red-700 flex items-center justify-center">
+                  <div className="w-0.5 h-3 bg-white mx-0.5 rounded-full" />
+                  <div className="w-0.5 h-3 bg-white mx-0.5 rounded-full" />
+                </div>
               </div>
 
               {/* Card Body */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-display font-black text-lg text-white group-hover:text-brand transition-colors duration-300">
+                  <h3 className="font-display font-black text-xl text-white group-hover:text-brand transition-colors duration-300">
                     {instructor.name}
                   </h3>
                   <p className="text-gray-400 text-xs font-light mt-3 leading-relaxed">
@@ -197,7 +118,7 @@ export default function Instructors() {
                   {instructor.categories.map((cat, idx) => (
                     <span
                       key={idx}
-                      className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 bg-[#1C1C1C] border border-[#262626] text-gray-400 rounded"
+                      className="text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 bg-brand/10 border border-brand/20 text-brand rounded-full"
                     >
                       {cat}
                     </span>

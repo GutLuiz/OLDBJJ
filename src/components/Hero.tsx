@@ -6,27 +6,27 @@ import Image from "next/image";
 const slides = [
   {
     image: "/assets/banner/banner-1.webp",
-    title: "Tradição & Excelência",
+    title: "Tradição & Excelência no Tatame",
     subtitle: "OLD CITY BJJ",
-    description: "Treine Jiu-Jitsu na Cidade Velha com a metodologia do Mestre Omar Salum. Defesa pessoal, saúde e disciplina para todas as idades.",
+    description: "Treine Jiu-Jitsu na Cidade Velha com estrutura completa e foco no seu desenvolvimento. Aulas de BJJ, Muay Thai e Boxe para adultos.",
   },
   {
     image: "/assets/banner/banner-2.png",
-    title: "Ambiente Familiar",
-    subtitle: "FORÇA E UNIÃO",
-    description: "Mais do que uma academia, somos uma família unida pelo esporte. Venha fazer amigos e evoluir diariamente no tatame.",
+    title: "Foco Principal em Jiu-Jitsu",
+    subtitle: "FORÇA E DISCIPLINA",
+    description: "Metodologia estruturada para o ensino de BJJ Adulto. Desenvolva defesa pessoal, condicionamento e técnica em um ambiente integrado.",
   },
   {
     image: "/assets/banner/banner-4.png",
-    title: "Jiu-Jitsu Kids & Feminino",
-    subtitle: "PARA TODOS",
-    description: "Turmas exclusivas e focadas no desenvolvimento motor, autoconfiança, disciplina e empoderamento feminino.",
+    title: "Artes Marciais Completas",
+    subtitle: "BJJ • MUAY THAI • BOXE",
+    description: "Aprenda Jiu-Jitsu como modalidade principal e potencialize sua preparação com turmas de Muay Thai e Boxe.",
   },
   {
     image: "/assets/banner/banner-5.png",
-    title: "Alta Performance",
-    subtitle: "FORJE SEU CARÁTER",
-    description: "Da iniciação ao nível competitivo, nossos treinos são desenhados para extrair o melhor de cada atleta, respeitando seus limites.",
+    title: "Turmas Adulto",
+    subtitle: "EVOLUÇÃO CONSTANTE",
+    description: "Treinos no horário do almoço e à noite projetados para se adaptar à sua rotina profissional e pessoal.",
   },
 ];
 

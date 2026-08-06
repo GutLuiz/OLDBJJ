@@ -10,7 +10,7 @@ export default function Activities() {
   const cards: ActivityCard[] = [
     {
       title: "Horários Flexíveis",
-      description: "Treinos divididos em várias turmas ao longo do dia (manhã, tarde e noite). Encaixe o Jiu-Jitsu perfeitamente na sua rotina diária.",
+      description: "Treinos divididos no horário do almoço e à noite. Encaixe o Jiu-Jitsu, Muay Thai ou Boxe perfeitamente na sua rotina.",
       icon: (
         <svg className="w-8 h-8 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -18,8 +18,17 @@ export default function Activities() {
       ),
     },
     {
-      title: "Ambiente Familiar",
-      description: "Um espaço seguro, acolhedor e focado no respeito mútuo. Valorizamos a amizade e a integração de todos os nossos alunos.",
+      title: "Ênfase em Jiu-Jitsu (BJJ)",
+      description: "O BJJ é nossa modalidade principal. Metodologia sólida para raspagens, passagens, finalizações e defesa pessoal eficiente.",
+      icon: (
+        <svg className="w-8 h-8 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Turmas Adulto",
+      description: "Treinos desenhados especificamente para homens e mulheres adultas, do iniciante ao graduado, com máximo respeito e segurança.",
       icon: (
         <svg className="w-8 h-8 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -27,20 +36,11 @@ export default function Activities() {
       ),
     },
     {
-      title: "Todas as Idades",
-      description: "Aulas estruturadas para crianças (a partir de 4 anos), jovens, adultos e master. O Jiu-Jitsu é um esporte democrático e para a vida toda.",
+      title: "Striking: Muay Thai & Boxe",
+      description: "Complemente seu treino no tatame com modalidades de trocação para aprimorar seu condicionamento físico e agilidade.",
       icon: (
         <svg className="w-8 h-8 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-    },
-    {
-      title: "Aulas Personalizadas",
-      description: "Atenção individualizada dos professores para garantir a correta execução técnica, segurança do atleta e sua rápida evolução técnica.",
-      icon: (
-        <svg className="w-8 h-8 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
     },

@@ -5,9 +5,8 @@ import React, { useState, useEffect } from "react";
 interface ClassSession {
   time: string;
   name: string;
-  category: "Adulto" | "Kids" | "Feminino" | "Competição";
+  category: "Adulto";
   level: string;
-  coach: string;
 }
 
 interface WeeklySchedule {
@@ -26,47 +25,20 @@ export default function Schedule() {
 
   const scheduleData: WeeklySchedule = {
     seg: [
-      { time: "06:30 - 07:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis", coach: "Prof. Omar Salum" },
-      { time: "08:30 - 09:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Iniciantes", coach: "Inst. Auxiliar" },
-      { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Treino Livre", coach: "Todos os Professores" },
-      { time: "17:00 - 18:00", name: "Jiu-Jitsu Kids", category: "Kids", level: "4 a 12 anos", coach: "Profª. Especializada" },
-      { time: "18:00 - 19:00", name: "Jiu-Jitsu Feminino", category: "Feminino", level: "Exclusivo Feminino", coach: "Profª. Responsável" },
-      { time: "19:30 - 21:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Fundamentos & Graduados", coach: "Mestre Omar Salum" },
+      { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
+      { time: "19:30 - 20:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
     ],
-    ter: [
-      { time: "06:30 - 07:30", name: "Jiu-Jitsu No-Gi (Sem Kimono)", category: "Adulto", level: "Todos os níveis", coach: "Prof. Omar Salum" },
-      { time: "08:30 - 09:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Iniciantes", coach: "Inst. Auxiliar" },
-      { time: "17:00 - 18:00", name: "Jiu-Jitsu Kids", category: "Kids", level: "4 a 12 anos", coach: "Profª. Especializada" },
-      { time: "18:30 - 19:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Iniciantes", coach: "Inst. Auxiliar" },
-      { time: "19:45 - 21:15", name: "Jiu-Jitsu Competidores", category: "Competição", level: "Avançado / Competição", coach: "Mestre Omar Salum" },
-    ],
+    ter: [],
     qua: [
-      { time: "06:30 - 07:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis", coach: "Prof. Omar Salum" },
-      { time: "08:30 - 09:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Iniciantes", coach: "Inst. Auxiliar" },
-      { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Treino Livre", coach: "Todos os Professores" },
-      { time: "17:00 - 18:00", name: "Jiu-Jitsu Kids", category: "Kids", level: "4 a 12 anos", coach: "Profª. Especializada" },
-      { time: "18:00 - 19:00", name: "Jiu-Jitsu Feminino", category: "Feminino", level: "Exclusivo Feminino", coach: "Profª. Responsável" },
-      { time: "19:30 - 21:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Fundamentos & Graduados", coach: "Mestre Omar Salum" },
+      { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
+      { time: "19:30 - 20:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
     ],
-    qui: [
-      { time: "06:30 - 07:30", name: "Jiu-Jitsu No-Gi (Sem Kimono)", category: "Adulto", level: "Todos os níveis", coach: "Prof. Omar Salum" },
-      { time: "08:30 - 09:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Iniciantes", coach: "Inst. Auxiliar" },
-      { time: "17:00 - 18:00", name: "Jiu-Jitsu Kids", category: "Kids", level: "4 a 12 anos", coach: "Profª. Especializada" },
-      { time: "18:30 - 19:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Iniciantes", coach: "Inst. Auxiliar" },
-      { time: "19:45 - 21:15", name: "Jiu-Jitsu Competidores", category: "Competição", level: "Avançado / Competição", coach: "Mestre Omar Salum" },
-    ],
+    qui: [],
     sex: [
-      { time: "06:30 - 07:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis", coach: "Prof. Omar Salum" },
-      { time: "08:30 - 09:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Iniciantes", coach: "Inst. Auxiliar" },
-      { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Treino Livre", coach: "Todos os Professores" },
-      { time: "17:00 - 18:00", name: "Jiu-Jitsu Kids", category: "Kids", level: "4 a 12 anos", coach: "Profª. Especializada" },
-      { time: "18:00 - 19:00", name: "Jiu-Jitsu Feminino", category: "Feminino", level: "Exclusivo Feminino", coach: "Profª. Responsável" },
-      { time: "19:30 - 21:00", name: "Jiu-Jitsu Adulto (Sparring)", category: "Adulto", level: "Graduados - Rola", coach: "Mestre Omar Salum" },
+      { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
+      { time: "20:00 - 21:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
     ],
-    sab: [
-      { time: "09:00 - 10:30", name: "Treino Livre Coletivo", category: "Adulto", level: "Todos os níveis", coach: "Supervisão Geral" },
-      { time: "10:30 - 12:00", name: "Jiu-Jitsu Competição", category: "Competição", level: "Foco Competidores", coach: "Mestre Omar Salum" },
-    ],
+    sab: [],
   };
 
   const [activeDay, setActiveDay] = useState("seg");
@@ -74,23 +46,10 @@ export default function Schedule() {
   // Auto-detect current weekday on mount
   useEffect(() => {
     const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, ...
-    const dayMap = ["sab", "seg", "ter", "qua", "qui", "sex", "sab"]; // Sunday defaults to Saturday or Monday
+    const dayMap: { [key: number]: string } = { 1: "seg", 3: "qua", 5: "sex" };
     const currentDayKey = dayMap[today] || "seg";
     setActiveDay(currentDayKey);
   }, []);
-
-  const getCategoryColor = (category: ClassSession["category"]) => {
-    switch (category) {
-      case "Kids":
-        return "bg-cyan-500/10 text-cyan-400 border-cyan-500/20";
-      case "Feminino":
-        return "bg-pink-500/10 text-pink-400 border-pink-500/20";
-      case "Competição":
-        return "bg-red-500/10 text-red-400 border-red-500/20";
-      default:
-        return "bg-brand/10 text-brand border-brand/20";
-    }
-  };
 
   return (
     <section id="schedule" className="py-24 bg-[#0F0F0F] border-y border-[#1A1A1A] relative">
@@ -102,11 +61,11 @@ export default function Schedule() {
             Grade Oficial
           </span>
           <h2 className="font-display font-black text-3xl sm:text-5xl text-white tracking-tight uppercase mt-4">
-            Nossos Horários de <span className="text-brand">Treino</span>
+            Horários de <span className="text-brand">Treino</span>
           </h2>
           <div className="h-1.5 w-24 bg-brand mx-auto mt-6 rounded-full" />
           <p className="text-gray-400 mt-6 text-base sm:text-lg font-light">
-            Encontre a turma que melhor se adapta aos seus objetivos e nível de experiência.
+            Aulas de Jiu-Jitsu (BJJ), Muay Thai &amp; Boxe para público adulto. 
           </p>
         </div>
 
@@ -117,7 +76,7 @@ export default function Schedule() {
               key={day.key}
               onClick={() => setActiveDay(day.key)}
               className={`px-5 py-3 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-300 border ${
-                 activeDay === day.key
+                activeDay === day.key
                   ? "bg-brand text-white border-brand shadow-glow-red"
                   : "bg-[#161616] text-gray-400 border-[#262626] hover:text-white hover:border-gray-600"
               }`}
@@ -138,7 +97,7 @@ export default function Schedule() {
                     className="p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-6 hover:bg-[#161616] transition-colors duration-300 group"
                   >
                     {/* Time Column */}
-                    <div className="flex items-center space-x-3 sm:w-1/4">
+                    <div className="flex items-center space-x-3 sm:w-1/3">
                       <svg className="w-5 h-5 text-brand flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -149,11 +108,11 @@ export default function Schedule() {
 
                     {/* Class Details Column */}
                     <div className="flex-1 space-y-1.5">
-                      <div className="flex flex-wrap items-center gap-2">
+                      <div className="flex flex-wrap items-center gap-3">
                         <h4 className="text-white font-bold text-lg group-hover:text-brand transition-colors duration-300">
                           {session.name}
                         </h4>
-                        <span className={`text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full border ${getCategoryColor(session.category)}`}>
+                        <span className="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full border bg-brand/10 text-brand border-brand/20">
                           {session.category}
                         </span>
                       </div>
@@ -162,21 +121,12 @@ export default function Schedule() {
                       </p>
                     </div>
 
-                    {/* Coach Column */}
-                    <div className="sm:w-1/4 flex items-center space-x-2 text-sm text-gray-500 sm:justify-end">
-                      <svg className="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                      </svg>
-                      <span className="font-medium group-hover:text-gray-400 transition-colors">
-                        {session.coach}
-                      </span>
-                    </div>
-
                   </div>
                 ))
               ) : (
-                <div className="p-12 text-center text-gray-500 font-light">
-                  Nenhum treino agendado para este dia.
+                <div className="p-12 text-center text-gray-500 font-light space-y-2">
+                  <p className="text-gray-400 font-medium">Horários a serem divulgados em breve.</p>
+                  <p className="text-xs text-gray-600">Em breve novos horários disponíveis para Muay Thai &amp; Boxe neste dia.</p>
                 </div>
               )}
             </div>

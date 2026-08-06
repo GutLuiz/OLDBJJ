@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#070707] border-t border-[#1F1F1F] text-gray-400 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           
           {/* Column 1: About */}
           <div className="flex flex-col space-y-4">
@@ -29,9 +29,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm leading-relaxed text-gray-500">
-              Escola de Jiu-Jitsu de alto rendimento e ambiente familiar na Cidade Velha. 
-              Sob a supervisão do Mestre Omar Salum, transmitimos a arte suave com integridade, 
-              respeito e excelência.
+              Centro de artes marciais com ênfase em Jiu-Jitsu (BJJ), Muay Thai e Boxe na Cidade Velha. 
+              Ambiente moderno e focado na evolução física, técnica e bem-estar.
             </p>
             {/* Social Icons */}
             <div className="flex space-x-4 pt-2">
@@ -111,27 +110,6 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <span>contato@oldcitybjj.com.br</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4: Hours */}
-          <div className="flex flex-col space-y-4">
-            <h3 className="text-white font-bold tracking-wide uppercase text-sm font-display border-l-2 border-brand pl-2">
-              Horários de Funcionamento
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li className="flex justify-between border-b border-[#1A1A1A] pb-1.5">
-                <span>Segunda a Sexta:</span>
-                <span className="text-white font-semibold">06:00 - 22:00</span>
-              </li>
-              <li className="flex justify-between border-b border-[#1A1A1A] pb-1.5">
-                <span>Sábado:</span>
-                <span className="text-white font-semibold">08:00 - 12:00</span>
-              </li>
-              <li className="flex justify-between pb-1.5">
-                <span>Domingo:</span>
-                <span className="text-brand font-semibold">Fechado</span>
               </li>
             </ul>
           </div>

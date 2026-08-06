@@ -14,17 +14,20 @@ interface NavLink {
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
 
   // Navigation Links
   const navLinks: NavLink[] = [
     { label: "Início", href: "/#home", isAnchor: true },
-    { label: "Espaço", href: "/espaco", isAnchor: false },
+    { label: "Horários", href: "/#schedule", isAnchor: true },
     { label: "Professores", href: "/#instructors", isAnchor: true },
+    { label: "Espaço", href: "/espaco", isAnchor: false },
     { label: "Competições", href: "/competicoes", isAnchor: false },
   ];
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       if (window.scrollY > 20) {
         setIsScrolled(true);
@@ -39,7 +42,7 @@ export default function Header() {
   // Close mobile menu on page or anchor change
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, link: NavLink) => {
     setIsOpen(false);
-    
+
     // If we are on a subpage and click an anchor, let Next.js handle the routing to homepage.
     // If we are on homepage and click an anchor, we can do a smooth scroll.
     if (link.isAnchor && pathname === "/") {
@@ -64,11 +67,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-[#0A0A0A] bg-opacity-95 backdrop-blur-md border-b border-[#262626] py-3 shadow-lg"
           : "bg-transparent py-5"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -88,7 +90,7 @@ export default function Header() {
                 Old City <span className="text-brand">BJJ</span>
               </span>
               <span className="text-[10px] text-gray-400 font-medium tracking-widest uppercase">
-                Omar Salum - Cidade Velha
+                BJJ • Muay Thai • Boxe
               </span>
             </div>
           </Link>
@@ -98,17 +100,16 @@ export default function Header() {
             {navLinks.map((link) => {
               const isActive =
                 (!link.isAnchor && pathname === link.href) ||
-                (link.isAnchor && pathname === "/" && typeof window !== "undefined" && window.location.hash === link.href.replace("/", ""));
+                (link.isAnchor && pathname === "/" && mounted && window.location.hash === link.href.replace("/", ""));
               return (
                 <Link
                   key={link.label}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-colors duration-200 ${
-                    isActive
+                  className={`px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-colors duration-200 ${isActive
                       ? "text-brand border-b-2 border-brand rounded-none font-bold"
                       : "text-gray-300 hover:text-brand"
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </Link>
@@ -151,9 +152,8 @@ export default function Header() {
       </div>
 
       <div
-        className={`lg:hidden absolute inset-x-0 top-full bg-[#0A0A0A] border-b border-[#262626] transition-all duration-300 ease-in-out ${
-          isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-4 invisible pointer-events-none"
-        }`}
+        className={`lg:hidden absolute inset-x-0 top-full bg-[#0A0A0A] border-b border-[#262626] transition-all duration-300 ease-in-out ${isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-4 invisible pointer-events-none"
+          }`}
       >
         <div className="px-4 pt-2 pb-6 space-y-2">
           {navLinks.map((link) => (
