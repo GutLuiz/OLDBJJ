@@ -1,12 +1,26 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const pathname = usePathname();
 
   // WhatsApp Url
   const whatsappUrl = "https://wa.me/5591982489117?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+as+aulas+de+Jiu-Jitsu.";
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  };
 
   return (
     <footer className="bg-[#070707] border-t border-[#1F1F1F] text-gray-400 pt-16 pb-8">
@@ -15,7 +29,7 @@ export default function Footer() {
           
           {/* Column 1: About */}
           <div className="flex flex-col space-y-4">
-            <Link href="/" className="flex items-center space-x-3 group">
+            <Link href="/#home" onClick={handleLogoClick} className="flex items-center space-x-3 group">
               <div className="relative w-10 h-10 rounded-full overflow-hidden border border-brand flex-shrink-0">
                 <Image
                   src="/assets/logos/old_city.jpeg"
