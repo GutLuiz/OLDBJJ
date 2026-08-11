@@ -8,10 +8,10 @@ const slides = [
     image: "/assets/banner/banner-1.webp",
     title: "Tradição & Excelência no Tatame",
     subtitle: "OLD CITY BJJ",
-    description: "Treine Jiu-Jitsu na Cidade Velha com estrutura completa e foco no seu desenvolvimento. Aulas de BJJ, Muay Thai e Boxe para adultos.",
+    description: "Treine Jiu-Jitsu na Cidade Velha com estrutura completa e foco no seu desenvolvimento. Aulas de BJJ e Muay Thai para adultos.",
   },
   {
-    image: "/assets/banner/banner-2.png",
+    image: "/assets/banner/banner-2.jpeg",
     title: "Foco Principal em Jiu-Jitsu",
     subtitle: "FORÇA E DISCIPLINA",
     description: "Metodologia estruturada para o ensino de BJJ Adulto. Desenvolva defesa pessoal, condicionamento e técnica em um ambiente integrado.",
@@ -19,8 +19,8 @@ const slides = [
   {
     image: "/assets/banner/banner-4.png",
     title: "Artes Marciais Completas",
-    subtitle: "BJJ • MUAY THAI • BOXE",
-    description: "Aprenda Jiu-Jitsu como modalidade principal e potencialize sua preparação com turmas de Muay Thai e Boxe.",
+    subtitle: "BJJ • MUAY THAI",
+    description: "Aprenda Jiu-Jitsu como modalidade principal e potencialize sua preparação com turmas de Muay Thai.",
   },
   {
     image: "/assets/banner/banner-5.png",

@@ -24,7 +24,7 @@ export default function Plans() {
       ctaText: "Consultar Valor",
       features: [
         { text: "Acesso a turmas de Jiu-Jitsu (BJJ)", included: true },
-        { text: "Aulas de Muay Thai & Boxe", included: true },
+        { text: "Aulas de Muay Thai", included: true },
         { text: "Instrutores dedicados e qualificados", included: true },
         { text: "Acesso aos vestiários e duchas", included: true },
         { text: "Sem taxa de adesão ou matrícula", included: true },
@@ -38,7 +38,7 @@ export default function Plans() {
       ctaText: "Consultar Valor",
       features: [
         { text: "Acesso a turmas de Jiu-Jitsu (BJJ)", included: true },
-        { text: "Aulas de Muay Thai & Boxe", included: true },
+        { text: "Aulas de Muay Thai", included: true },
         { text: "Instrutores dedicados e qualificados", included: true },
         { text: "Acesso aos vestiários e duchas", included: true },
         { text: "Desconto especial para familiares", included: true },
@@ -52,7 +52,7 @@ export default function Plans() {
       ctaText: "Consultar Valor",
       features: [
         { text: "Acesso a turmas de Jiu-Jitsu (BJJ)", included: true },
-        { text: "Aulas de Muay Thai & Boxe", included: true },
+        { text: "Aulas de Muay Thai", included: true },
         { text: "Instrutores dedicados e qualificados", included: true },
         { text: "Acesso aos vestiários e duchas", included: true },
         { text: "Desconto para Segurança Pública", included: true },
@@ -66,7 +66,7 @@ export default function Plans() {
       ctaText: "Consultar Valor",
       features: [
         { text: "Acesso a turmas de Jiu-Jitsu (BJJ)", included: true },
-        { text: "Aulas de Muay Thai & Boxe", included: true },
+        { text: "Aulas de Muay Thai", included: true },
         { text: "Instrutores dedicados e qualificados", included: true },
         { text: "Acesso aos vestiários e duchas", included: true },
         { text: "Desconto para protetores de animais", included: true },

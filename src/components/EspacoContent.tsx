@@ -26,7 +26,7 @@ const slides = [
     image: "/assets/espaco/espaco-3.webp",
     tag: "Estrutura Premium",
     title: "HIGIENE & PRATICIDADE",
-    description: "Instalações modernas com vestiários completos (feminino e masculino) equipados com duchas quentes, além de higienização constante e ambiente 100% climatizado.",
+    description: "Instalações modernas com vestiários completos (feminino e masculino) equipados com duchas, além de higienização constante e ambiente 100% climatizado.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function EspacoContent() {
     },
     {
       title: "Vestiários com Chuveiro",
-      description: "Infraestrutura com vestiários masculino e feminino completos, equipados com chuveiros de água quente para sua comodidade pós-treino.",
+      description: "Infraestrutura com vestiários masculino e feminino completos, equipados com chuveiros para sua comodidade pós-treino.",
       icon: (
         <svg className="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />

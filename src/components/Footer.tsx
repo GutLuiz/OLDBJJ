@@ -29,8 +29,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm leading-relaxed text-gray-500">
-              Centro de artes marciais com ênfase em Jiu-Jitsu (BJJ), Muay Thai e Boxe na Cidade Velha. 
-              Ambiente moderno e focado na evolução física, técnica e bem-estar.
+              O Centro de Treinamento de Combate Rocha Silva, inscrito no CNPJ nº 66.200.368/0001-01, é um espaço dedicado ao ensino, treinamento e aperfeiçoamento em Jiu-Jitsu, Defesa Pessoal, Muay Thai e preparação física.
             </p>
             {/* Social Icons */}
             <div className="flex space-x-4 pt-2">
@@ -78,7 +77,7 @@ export default function Footer() {
                 <Link href="/#plans" className="hover:text-brand transition-colors">Nossos Planos</Link>
               </li>
               <li>
-                <Link href="/#instructors" className="hover:text-brand transition-colors">Professores</Link>
+                <Link href="/#instructors" className="hover:text-brand transition-colors">Professores & Instrutores</Link>
               </li>
               <li>
                 <Link href="/competicoes" className="hover:text-brand transition-colors">Competições</Link>
@@ -116,7 +115,7 @@ export default function Footer() {
           <p className="mt-2 md:mt-0">
             Desenvolvido por{" "}
             <a
-              href="https://github.com"
+              href="https://wa.me/5591998154336?text=Ol%C3%A1%21+Gostaria+de+ter+um+site."
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-brand font-medium transition-colors"

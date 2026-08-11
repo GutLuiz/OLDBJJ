@@ -1,8 +1,9 @@
 import React from "react";
 
 export default function Location() {
-  const address = "Rua Ângelo Custódio, 696 (entre as ruas Triunvirato e Veiga Cabral) - Cidade Velha, Belém - PA";
-  const whatsappUrl = "https://wa.me/5591982489117?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+aula+experimental+de+Jiu-Jitsu.";
+  const gymName = "Academia Omar Salum Cidade Velha - Old City BJJ";
+  const address = "Rua Ângelo Custódio, 696 (entre Triunvirato e Veiga Cabral) - Cidade Velha, Belém - PA";
+  const mapsUrl = "https://www.google.com/maps?sca_esv=fc004d589c879ddc&hl=pt-BR&output=search&q=Academia+Omar+Salum+Cidade+Velha+-+Old+City+BJJ+Bel%C3%A9m&source=lnms&fbs=ABfTbFVGaQeaqnsRPI5sOMG32KszkLt6nAp8aiRKj5vMjqZApNpVvru9ixr0n1v-xHgyxKmzaezuVb3bC12oyuZkvJQ6khi3CZBGSZSBzdGUseAnwzYXgaRPGFBHSm6o1uC2eLF_bYMNmNNXp35Ow24RLHsGhCZEmheQCv2t5UEuDhhtJjtDZdHANW9oVtnkLFBpo6EvbBBu1-ScGD0EM_jSVxU4l5XH8Q&entry=mc&ved=1t:200715&ictx=111";
 
   return (
     <section id="location" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
@@ -20,10 +21,14 @@ export default function Location() {
             Como Nos <span className="text-brand">Encontrar</span>
           </h2>
           <div className="h-1.5 w-24 bg-brand mx-auto mt-6 rounded-full" />
-          <p className="text-gray-400 mt-6 text-base sm:text-lg font-light leading-relaxed">
-            Estamos situados no coração histórico da Cidade Velha. Venha fazer uma visita e 
-            conhecer de perto nosso tatame e estrutura.
-          </p>
+          <div className="text-gray-400 mt-6 text-base sm:text-lg font-light leading-relaxed space-y-3">
+            <p>
+              Estamos localizados no coração histórico de Belém, capital do Estado do Pará, no querido e tradicional bairro da Cidade Velha. Um lugar onde história, cultura e Jiu-Jitsu se encontram.
+            </p>
+            <p>
+              Venha nos fazer uma visita, conhecer de perto nossa estrutura, nosso tatame e sentir a energia da nossa equipe.
+            </p>
+          </div>
         </div>
 
         {/* Content Layout */}
@@ -36,11 +41,11 @@ export default function Location() {
 
             <div className="space-y-8">
               <h3 className="font-display font-black text-2xl text-white uppercase tracking-wide">
-                Informações de <span className="text-brand">Contato</span>
+                Informações de <span className="text-brand">Contato & Local</span>
               </h3>
 
               <div className="space-y-6">
-                {/* Address Item */}
+                {/* Gym Name & Address Item */}
                 <div className="flex items-start space-x-4">
                   <div className="w-10 h-10 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand flex-shrink-0 mt-1">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -49,7 +54,7 @@ export default function Location() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-white font-bold text-sm uppercase tracking-wide">Endereço</h4>
+                    <h4 className="text-white font-bold text-sm uppercase tracking-wide">{gymName}</h4>
                     <p className="text-gray-400 text-sm mt-1 leading-relaxed">{address}</p>
                   </div>
                 </div>
@@ -72,12 +77,15 @@ export default function Location() {
             {/* Quick Action */}
             <div className="mt-10 border-t border-[#1C1C1C] pt-8">
               <a
-                href={whatsappUrl}
+                href={mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center px-6 py-4 rounded-full text-sm font-bold uppercase tracking-wider text-white bg-brand hover:bg-brand-dark transition-all duration-300 shadow-glow-red hover:shadow-glow-red-lg"
+                className="w-full inline-flex items-center justify-center gap-3 px-6 py-4 rounded-full text-sm font-bold uppercase tracking-wider text-white bg-brand hover:bg-brand-dark transition-all duration-300 shadow-glow-red hover:shadow-glow-red-lg hover:-translate-y-0.5"
               >
-                Falar Conosco Agora
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+                Ver Rota no Google Maps
               </a>
             </div>
 
@@ -87,7 +95,7 @@ export default function Location() {
           <div className="lg:col-span-7 h-[450px] lg:h-auto min-h-[400px] border border-[#262626] rounded-2xl overflow-hidden shadow-2xl relative group">
             {/* The filter class simulates dark mode map; transitions to colored map on hover */}
             <iframe
-              src="https://maps.google.com/maps?q=Rua+%C3%82ngelo+Cust%C3%B3dio,+696+-+Cidade+Velha,+Bel%C3%A9m+-+PA&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Academia+Omar+Salum+Cidade+Velha+-+Old+City+BJJ,+Rua+%C3%82ngelo+Cust%C3%B3dio,+696+-+Cidade+Velha,+Bel%C3%A9m+-+PA&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -95,7 +103,7 @@ export default function Location() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-full filter grayscale invert contrast-95 opacity-80 group-hover:filter-none group-hover:opacity-100 transition-all duration-700 ease-in-out"
-              title="Localização da Academia Old City BJJ no Google Maps"
+              title="Localização da Academia Omar Salum Cidade Velha - Old City BJJ no Google Maps"
             />
           </div>
 

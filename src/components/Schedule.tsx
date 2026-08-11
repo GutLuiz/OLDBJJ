@@ -25,21 +25,26 @@ export default function Schedule() {
 
   const scheduleData: WeeklySchedule = {
     seg: [
-      { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
-      { time: "16:00 - 17:00", name: "Jiu-Jitsu Kids", category: "Kids", level: "Infantil / Todos os níveis" },
-      { time: "19:30 - 20:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
+      { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto (Turma 02 — Gi)", category: "Adulto", level: "Prof. Nascimento • Gi (Com Kimono)" },
+      { time: "16:00 - 17:00", name: "Jiu-Jitsu Kids (Turma 03)", category: "Kids", level: "Profª. Liah Santos • Infantil / Kids" },
+      { time: "19:30 - 20:30", name: "Jiu-Jitsu Adulto (Turma 01 — Gi)", category: "Adulto", level: "Prof. Nascimento • Gi (Com Kimono)" },
     ],
-    ter: [],
+    ter: [
+      { time: "20:00 - 21:00", name: "Muay Thai", category: "Muay Thai", level: "Instrutora Amanda Nunes • Todos os níveis" },
+    ],
     qua: [
-      { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
-      { time: "16:00 - 17:00", name: "Jiu-Jitsu Kids", category: "Kids", level: "Infantil / Todos os níveis" },
-      { time: "19:30 - 20:30", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
+      { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto (Turma 02 — Gi)", category: "Adulto", level: "Prof. Nascimento • Gi (Com Kimono)" },
+      { time: "16:00 - 17:00", name: "Jiu-Jitsu Kids (Turma 03)", category: "Kids", level: "Profª. Liah Santos • Infantil / Kids" },
+      { time: "19:30 - 20:30", name: "Jiu-Jitsu Adulto (Turma 01 — Gi)", category: "Adulto", level: "Prof. Nascimento • Gi (Com Kimono)" },
+      { time: "20:30 - 21:30", name: "Muay Thai", category: "Muay Thai", level: "Instrutora Amanda Nunes • Todos os níveis" },
     ],
-    qui: [],
+    qui: [
+      { time: "20:00 - 21:00", name: "Muay Thai", category: "Muay Thai", level: "Instrutora Amanda Nunes • Todos os níveis" },
+    ],
     sex: [
-      { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
-      { time: "16:00 - 17:00", name: "Jiu-Jitsu Kids", category: "Kids", level: "Infantil / Todos os níveis" },
-      { time: "20:00 - 21:00", name: "Jiu-Jitsu Adulto", category: "Adulto", level: "Todos os níveis" },
+      { time: "12:00 - 13:00", name: "Jiu-Jitsu Adulto (Turma 02 — No-Gi)", category: "Adulto", level: "Prof. Nascimento • No-Gi (Sem Kimono)" },
+      { time: "16:00 - 17:00", name: "Jiu-Jitsu Kids (Turma 03)", category: "Kids", level: "Profª. Liah Santos • Infantil / Kids" },
+      { time: "20:00 - 21:00", name: "Jiu-Jitsu Adulto (Turma 01 — No-Gi)", category: "Adulto", level: "Prof. Nascimento • No-Gi (Sem Kimono)" },
     ],
     sab: [],
   };
@@ -49,7 +54,7 @@ export default function Schedule() {
   // Auto-detect current weekday on mount
   useEffect(() => {
     const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, ...
-    const dayMap: { [key: number]: string } = { 1: "seg", 3: "qua", 5: "sex" };
+    const dayMap: { [key: number]: string } = { 1: "seg", 2: "ter", 3: "qua", 4: "qui", 5: "sex" };
     const currentDayKey = dayMap[today] || "seg";
     setActiveDay(currentDayKey);
   }, []);
@@ -68,7 +73,7 @@ export default function Schedule() {
           </h2>
           <div className="h-1.5 w-24 bg-brand mx-auto mt-6 rounded-full" />
           <p className="text-gray-400 mt-6 text-base sm:text-lg font-light">
-            Aulas de Jiu-Jitsu (BJJ) Adulto &amp; Kids, Muay Thai &amp; Boxe. 
+            Aulas de Jiu-Jitsu (BJJ) Adulto &amp; Kids e Muay Thai.
           </p>
         </div>
 
@@ -118,13 +123,15 @@ export default function Schedule() {
                         <span className={`text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full border ${
                           session.category === "Kids"
                             ? "bg-amber-500/10 text-amber-400 border-amber-500/20"
+                            : session.category === "Muay Thai"
+                            ? "bg-blue-500/10 text-blue-400 border-blue-500/20"
                             : "bg-brand/10 text-brand border-brand/20"
                         }`}>
                           {session.category}
                         </span>
                       </div>
                       <p className="text-gray-400 text-sm font-light">
-                        Nível: <span className="text-gray-300 font-medium">{session.level}</span>
+                        Detalhes: <span className="text-gray-300 font-medium">{session.level}</span>
                       </p>
                     </div>
 
@@ -132,8 +139,8 @@ export default function Schedule() {
                 ))
               ) : (
                 <div className="p-12 text-center text-gray-500 font-light space-y-2">
-                  <p className="text-gray-400 font-medium">Horários a serem divulgados em breve.</p>
-                  <p className="text-xs text-gray-600">Em breve novos horários disponíveis para Muay Thai &amp; Boxe neste dia.</p>
+                  <p className="text-gray-400 font-medium">Sem treinos regulares programados para este dia.</p>
+                  <p className="text-xs text-gray-600">Fique atento aos nossos canais oficiais para eventos e aulões de fim de semana.</p>
                 </div>
               )}
             </div>

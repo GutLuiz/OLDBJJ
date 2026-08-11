@@ -38,8 +38,7 @@ export default function Affiliation() {
                 Equipe Omar Salum
               </h3>
               <p className="text-gray-400 text-xs sm:text-sm leading-relaxed font-light">
-                Metodologia oficial chancelada diretamente pelo Mestre Omar Salum, Faixa Preta 6º Grau. 
-                Garantia de aprendizado com fundamentos consolidados e linhagem direta.
+                Metodologia oficial chancelada diretamente pelo Professor Omar Salum, Faixa Preta 6º Grau, multicampeão, faixa-preta do Mestre Royler Gracie e líder da Gracie Humaitá Hemet.
               </p>
             </div>
           </div>

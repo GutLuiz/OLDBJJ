@@ -16,10 +16,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         brand: {
-          light: "#FF4D61",
-          DEFAULT: "#DD0121",
-          dark: "#B00017",
-          glow: "rgba(221, 1, 33, 0.4)",
+          light: "#FACC15",
+          DEFAULT: "#EAB308",
+          dark: "#CA8A04",
+          glow: "rgba(234, 179, 8, 0.4)",
         },
         dark: {
           bg: "#0A0A0A",
@@ -30,8 +30,8 @@ export default {
         }
       },
       boxShadow: {
-        'glow-red': '0 0 15px rgba(221, 1, 33, 0.4)',
-        'glow-red-lg': '0 0 25px rgba(221, 1, 33, 0.6)',
+        'glow-red': '0 0 15px rgba(234, 179, 8, 0.4)',
+        'glow-red-lg': '0 0 25px rgba(234, 179, 8, 0.6)',
       }
     },
   },

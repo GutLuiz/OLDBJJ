@@ -21,7 +21,7 @@ export default function Header() {
   const navLinks: NavLink[] = [
     { label: "Início", href: "/#home", isAnchor: true },
     { label: "Horários", href: "/#schedule", isAnchor: true },
-    { label: "Professores", href: "/#instructors", isAnchor: true },
+    { label: "Professores & Instrutores", href: "/#instructors", isAnchor: true },
     { label: "Espaço", href: "/espaco", isAnchor: false },
     { label: "Competições", href: "/competicoes", isAnchor: false },
   ];
@@ -90,7 +90,7 @@ export default function Header() {
                 Old City <span className="text-brand">BJJ</span>
               </span>
               <span className="text-[10px] text-gray-400 font-medium tracking-widest uppercase">
-                BJJ • Muay Thai • Boxe
+                BJJ • Muay Thai
               </span>
             </div>
           </Link>

@@ -10,7 +10,7 @@ export default function Activities() {
   const cards: ActivityCard[] = [
     {
       title: "Horários Flexíveis",
-      description: "Treinos divididos no horário do almoço e à noite. Encaixe o Jiu-Jitsu, Muay Thai ou Boxe perfeitamente na sua rotina.",
+      description: "Treinos divididos no horário do almoço e à noite. Encaixe o Jiu-Jitsu ou Muay Thai perfeitamente na sua rotina.",
       icon: (
         <svg className="w-8 h-8 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -19,7 +19,7 @@ export default function Activities() {
     },
     {
       title: "Ênfase em Jiu-Jitsu (BJJ)",
-      description: "O BJJ é nossa modalidade principal. Metodologia sólida para raspagens, passagens, finalizações e defesa pessoal eficiente.",
+      description: "Modalidade principal da academia, focada em disciplina, respeito e tradição. Seguimos a linhagem direta do Professor Omar Salum, faixa-preta do Mestre Royler Gracie (filho do Grande Mestre Hélio Gracie), garantindo ensino técnico de excelência.",
       icon: (
         <svg className="w-8 h-8 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -36,7 +36,7 @@ export default function Activities() {
       ),
     },
     {
-      title: "Striking: Muay Thai & Boxe",
+      title: "Striking: Muay Thai",
       description: "Complemente seu treino no tatame com modalidades de trocação para aprimorar seu condicionamento físico e agilidade.",
       icon: (
         <svg className="w-8 h-8 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,8 +64,7 @@ export default function Activities() {
           </h2>
           <div className="h-1.5 w-24 bg-brand mx-auto mt-6 rounded-full" />
           <p className="text-gray-400 mt-6 text-base sm:text-lg font-light leading-relaxed">
-            Oferecemos uma infraestrutura de ponta e metodologia consagrada para proporcionar 
-            a melhor experiência de aprendizado, segurança e bem-estar físico e mental.
+            Estrutura moderna e higienizada com climatização total, tatame premium, vestiários, guarda-volumes e bebedouros. Unimos tradição e tecnologia com monitoramento 24h e controle por reconhecimento facial para você focar 100% na sua evolução.
           </p>
         </div>
 
@@ -90,7 +89,7 @@ export default function Activities() {
               </h3>
 
               {/* Description */}
-              <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+              <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300 whitespace-pre-line">
                 {card.description}
               </p>
             </div>
