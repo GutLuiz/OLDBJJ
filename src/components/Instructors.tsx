@@ -54,11 +54,11 @@ export default function Instructors() {
     {
       id: 5,
       name: "Instrutora Amanda Nunes",
-      rank: "Prajied Azul Escuro",
-      role: "Muay Thai",
-      categories: ["Muay Thai", "Striking"],
-      bio: "Instrutora de Muay Thai da Unidade Cidade Velha, graduada Prajied Azul Escuro, dedicada ao ensino técnico e preparação física dos alunos.",
-      image: "/assets/logos/old_city.jpeg",
+      rank: "Faixa-Marrom 4º Grau • Prajied Azul Escuro",
+      role: "Muay Thai & Jiu-Jitsu",
+      categories: ["Faixa-Marrom 4º Grau", "Muay Thai", "Jiu-Jitsu"],
+      bio: "Além de Instrutora de Muay Thai (graduada Prajied Azul Escuro), é também Instrutora de Jiu-Jitsu faixa Marrom 4º grau na Unidade Cidade Velha, dedicada ao ensino técnico e desenvolvimento dos alunos.",
+      image: "/assets/professores/amanda.jpeg",
     },
   ];
 
@@ -111,13 +111,19 @@ export default function Instructors() {
               </div>
 
               {/* Belt visual strip */}
-              <div className="h-6 w-full bg-neutral-950 border-y border-neutral-800/80 flex items-center justify-between px-5 select-none relative mt-2">
-                <span className="text-[9px] font-black text-white/80 tracking-widest uppercase">
+              <div className={`h-6 w-full ${instructor.rank.includes("Marrom") ? "bg-[#3e2717]" : "bg-neutral-950"} border-y border-neutral-800/80 flex items-center justify-between px-5 select-none relative mt-2`}>
+                <span className="text-[9px] font-black text-white/80 tracking-widest uppercase truncate mr-2">
                   {instructor.rank}
                 </span>
-                <div className={`h-full w-14 ${instructor.rank.includes("Prajied") ? "bg-blue-800 border-l border-blue-900" : "bg-red-600 border-l border-red-700"} flex items-center justify-center`}>
+                <div className={`h-full w-14 ${instructor.rank.includes("Marrom") ? "bg-black border-l border-neutral-800" : instructor.rank.includes("Prajied") ? "bg-blue-800 border-l border-blue-900" : "bg-red-600 border-l border-red-700"} flex items-center justify-center shrink-0`}>
                   <div className="w-0.5 h-3.5 bg-white mx-0.5 rounded-full" />
                   <div className="w-0.5 h-3.5 bg-white mx-0.5 rounded-full" />
+                  {instructor.rank.includes("4º") && (
+                    <>
+                      <div className="w-0.5 h-3.5 bg-white mx-0.5 rounded-full" />
+                      <div className="w-0.5 h-3.5 bg-white mx-0.5 rounded-full" />
+                    </>
+                  )}
                 </div>
               </div>
 
